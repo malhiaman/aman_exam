@@ -1,4 +1,4 @@
-var themename = 'twentyseventeen-child';
+var themename = 'am-starter';
 
 var gulp = require('gulp'),
     // Prepare and optimize code etc
