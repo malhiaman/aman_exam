@@ -1,4 +1,4 @@
-var themename = 'am-starter';
+var themename = 'amstarter';
 
 var gulp = require('gulp'),
     // Prepare and optimize code etc

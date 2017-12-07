@@ -1,10 +1,10 @@
 <?php
 /**
- * am-starter functions and definitions
+ * amstarter functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package am-starter
+ * @package amstarter
  */
 
 if ( ! function_exists( 'am_starter_setup' ) ) :
@@ -19,10 +19,10 @@ if ( ! function_exists( 'am_starter_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on am-starter, use a find and replace
-		 * to change 'am-starter' to the name of your theme in all the template files.
+		 * If you're building a theme based on amstarter, use a find and replace
+		 * to change 'amstarter' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'am-starter', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'amstarter', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,12 @@ if ( ! function_exists( 'am_starter_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'am-starter' ),
+			'menu-1' => esc_html__( 'Header', 'amstarter' ),
+			'social' => esc_html__( 'social', 'amstarter' ),
+		
+			
+
+
 		) );
 
 		/*
@@ -102,9 +107,9 @@ add_action( 'after_setup_theme', 'am_starter_content_width', 0 );
  */
 function am_starter_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'am-starter' ),
+		'name'          => esc_html__( 'Sidebar', 'amstarter' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'am-starter' ),
+		'description'   => esc_html__( 'Add widgets here.', 'amstarter' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -117,13 +122,18 @@ add_action( 'widgets_init', 'am_starter_widgets_init' );
  * Enqueue scripts and styles.
  */
 function am_starter_scripts() {
-	wp_enqueue_style('am-starter-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif|Source+Sans+Pro:400,400i,700,900" rel="stylesheet');
+	wp_enqueue_style('amstarter-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif|Source+Sans+Pro:400,400i,700,900" rel="stylesheet');
 
-	wp_enqueue_style( 'am-starter-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'amstarter-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'am-starter-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'amstarter-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+	wp_localize_script('amstarter-navigation', 'amstarterScreenReaderText', array(
+		'expand' => __('Expand child menu' , 'amstarter'),
+		'collapse' => __('Collapse child menu' , 'amstarter'),
 
-	wp_enqueue_script( 'am-starter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	));
+     wp_enqueue_script( 'amstarter-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20171206', true );
+	wp_enqueue_script( 'amstarter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

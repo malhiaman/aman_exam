@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package am-starter
+ * @package amstarter
  */
 
 ?>
@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'am-starter' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'amstarter' ); ?></a>
 <?php if ( get_header_image() && is_front_page() ) : ?>
     <figure class="header-image">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -53,7 +53,7 @@ endif; ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'am-starter' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'amstarter' ); ?></button>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',

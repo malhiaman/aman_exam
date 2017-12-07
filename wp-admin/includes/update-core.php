@@ -777,7 +777,7 @@ $_new_bundled_files = array(
 	'themes/twentyfourteen/'  => '3.8',
 	'themes/twentyfifteen/'   => '4.1',
 	'themes/twentysixteen/'   => '4.4',
-	'themes/twentyseventeen/' => '4.7',
+	'themes/amstarter/' => '4.7',
 );
 
 /**

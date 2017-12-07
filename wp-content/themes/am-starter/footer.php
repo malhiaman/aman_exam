@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package am-starter
+ * @package amstarter
  */
 
 ?>
@@ -14,15 +14,23 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		<nav class="social-menu">
+		<?php
+				wp_nav_menu( array(
+					'theme_location' => 'social'
+					
+				) );
+?>
+</nav><!-- .social-menu -->
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'am-starter' ) ); ?>"><?php
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'amstarter' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'am-starter' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'amstarter' ), 'WordPress' );
 			?></a>
 			<span class="sep"> | </span>
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'am-starter' ), 'am-starter', '<a href="http://underscores.me/">amandeep kaur</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'amstarter' ), 'amstarter', '<a href="http://underscores.me/">amandeep kaur</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

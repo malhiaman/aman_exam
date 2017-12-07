@@ -1,8 +1,8 @@
 <?php
 /**
- * am-starter Theme Customizer
+ * amstarter Theme Customizer
  *
- * @package am-starter
+ * @package amstarter
  */
 
 /**
@@ -50,6 +50,6 @@ function am_starter_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function am_starter_customize_preview_js() {
-	wp_enqueue_script( 'am-starter-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'amstarter-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'am_starter_customize_preview_js' );
