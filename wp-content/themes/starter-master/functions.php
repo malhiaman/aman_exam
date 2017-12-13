@@ -65,7 +65,7 @@ if ( ! function_exists( 'mw_starter_setup' ) ) :
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
-/*  to remove the custom logo from customizer
+/* remove option for custom logo
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 

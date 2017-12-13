@@ -265,7 +265,13 @@ input,
 select,
 textarea {
 	color: #000;
-	font-family: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+	font-family: 'Roboto', sans-serif;
+  src: url('roboto.eot'); /* IE9 Compat Modes */
+  src: url('roboto.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('roboto.woff') format('woff'), /* Modern Browsers */
+  url('roboto.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('roboto.svg#svgFontName') format('svg'); /* Legacy iOS */
+
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.5;
@@ -278,7 +284,7 @@ textarea {
 	select,
 	textarea {
 		font-size: 20px;
-		font-size: 1.25rem;
+		font-size: 1.6rem;
 	}
 }
 
@@ -287,30 +293,31 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: .25em;
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	clear: both;
+	color: #626c85;
 }
 
 h1 {
-	font-size: 3em;
-}
-
-h2 {
-	font-size: 2.6em;
-}
-
-h3 {
 	font-size: 2.2em;
 }
 
-h4 {
-	font-size: 2em;
+h2 {
+	font-size: 2.0em;
 }
 
-h5 {
+h3 {
 	font-size: 1.8em;
 }
 
-h6 {
+h4 {
 	font-size: 1.6em;
+}
+
+h5 {
+	font-size: 1.4em;
+}
+
+h6 {
+	font-size: 1.2em;
 }
 
 p {
@@ -882,7 +889,7 @@ a:hover, a:active {
 	padding: 1em;
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	color: #fff;
-	background-color: #002254;
+	background-color: #90988b;
 }
 
 @media screen and (min-width: 600px) {
@@ -1134,7 +1141,9 @@ button.dropdown-toggle {
 
 .entry-header {
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	color: #626c85;
 }
+
 
 .cat-links {
 	font-size: 90%;
@@ -1148,24 +1157,29 @@ button.dropdown-toggle {
 }
 
 .cat-links a:focus, .cat-links a:hover {
-	background-color: #b51c35;
+	background-color: #b25634;
 	color: white;
 }
 
 .entry-title {
 	margin: .125em 0 .25em;
 	font-size: 2.5em;
+	color: #626c85;
+}
+
+h2.entry-title{
+	color: #626c85;
 }
 
 @media screen and (min-width: 900px) {
 	.entry-title {
-		font-size: 3em;
+		font-size: 2.2em;
 	}
 }
 
 .entry-title a {
 	text-decoration: none;
-	color: black;
+	color: #626c85;
 }
 
 .entry-title a:focus, .entry-title a:hover {
@@ -1292,7 +1306,7 @@ button.dropdown-toggle {
 	padding: 1em;
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	color: #fff;
-	background-color: #002254;
+	background-color: #90988b;
 	text-align: center;
 }
 
