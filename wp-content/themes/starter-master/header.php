@@ -32,7 +32,12 @@
 	
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-		<?php the_custom_logo(); ?>
+		
+	
+	  <?php //the_custom_logo(); ?>  
+	 
+	
+		
 			<div class="site-branding-text">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>

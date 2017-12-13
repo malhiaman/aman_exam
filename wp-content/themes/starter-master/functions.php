@@ -65,7 +65,7 @@ if ( ! function_exists( 'mw_starter_setup' ) ) :
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
-
+/*  to remove the custom logo from customizer
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -74,11 +74,13 @@ if ( ! function_exists( 'mw_starter_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
+		 /*
 		add_theme_support( 'custom-logo', array(
 			'height'      => 90,
 			'width'       => 90,
 			'flex-width'  => true,
-		) );
+		) ); 
+		*/
 	}
 endif;
 add_action( 'after_setup_theme', 'mw_starter_setup' );
